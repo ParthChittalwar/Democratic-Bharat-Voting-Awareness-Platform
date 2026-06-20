@@ -42,11 +42,6 @@ npm run lint       # run ESLint
 
 Requires Node.js 18+.
 
-## ⚖️ Legal & Compliance Pages
-
-`/disclaimer`, `/privacy-policy`, `/terms-of-use`, and `/references` are
-built in and pull their text from `src/data/legal.ts` and
-`src/data/references.ts`.
 
 ## 🙋 Attribution
 
