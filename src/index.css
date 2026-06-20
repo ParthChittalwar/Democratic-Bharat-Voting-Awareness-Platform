@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Color tokens : Democratic Bharat ---- */
+  --color-paper: #faf9f6;
+  --color-paper-dim: #f1efe9;
+  --color-ink: #0b1220;
+  --color-ink-soft: #2a3340;
+
+  --color-indigo-950: #081a30;
+  --color-indigo-900: #0e2a4d;
+  --color-indigo-800: #14365f;
+  --color-indigo-700: #1c4878;
+  --color-indigo-100: #e3ebf3;
+  --color-indigo-50: #f1f5f9;
+
+  --color-slate-700: #4b5563;
+  --color-slate-500: #6b7280;
+  --color-slate-300: #cbd2d9;
+  --color-slate-100: #eef1f4;
+
+  --color-saffron-600: #d97a1f;
+  --color-saffron-500: #ff9933;
+  --color-saffron-100: #fef0dd;
+
+  --color-verified-700: #146245;
+  --color-verified-500: #1b8a5a;
+  --color-verified-100: #e1f3ea;
+
+  --color-caution-600: #a8431f;
+  --color-caution-500: #c2541f;
+  --color-caution-100: #fbe9e1;
+
+  /* ---- Type ---- */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", monospace;
+
+  /* ---- Breakpoints (desktop-first priority per brief) ---- */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-2xl: 1680px;
+
+  --shadow-card: 0 1px 2px rgba(11, 18, 32, 0.04), 0 8px 24px -8px rgba(11, 18, 32, 0.10);
+  --shadow-card-hover: 0 2px 6px rgba(11, 18, 32, 0.06), 0 16px 36px -12px rgba(11, 18, 32, 0.16);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-slate-300);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  /* Visible, high-contrast focus states everywhere (accessibility requirement) */
+  :focus-visible {
+    outline: 3px solid var(--color-saffron-500);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Respect prefers-reduced-motion globally */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Perforated "ballot stub" edge — signature motif used on rails & dividers */
+  .perforated-edge {
+    background-image: radial-gradient(circle, var(--color-paper) 2.5px, transparent 2.6px);
+    background-size: 16px 16px;
+    background-position: center;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--color-slate-300);
+    border-radius: 999px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}

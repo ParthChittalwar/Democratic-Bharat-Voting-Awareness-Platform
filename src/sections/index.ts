@@ -1,0 +1,13 @@
+export { Hero } from "./Hero";
+export { ImportanceOfVoting } from "./ImportanceOfVoting";
+export { IndianDemocracy } from "./IndianDemocracy";
+export { WhatIsEVM } from "./WhatIsEVM";
+export { EVMComponents } from "./EVMComponents";
+export { EVMSimulation } from "./EVMSimulation";
+export { VoteJourney } from "./VoteJourney";
+export { VVPATExplainer } from "./VVPATExplainer";
+export { SecurityFeatures } from "./SecurityFeatures";
+export { ElectionDayWorkflow } from "./ElectionDayWorkflow";
+export { FutureOfVoting } from "./FutureOfVoting";
+export { MythsVsFacts } from "./MythsVsFacts";
+export { FAQSection } from "./FAQSection";

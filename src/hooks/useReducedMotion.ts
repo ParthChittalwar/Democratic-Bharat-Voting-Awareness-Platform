@@ -1,0 +1,23 @@
+import { useEffect, useState } from "react";
+
+function getInitialReducedMotion(): boolean {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+/**
+ * Tracks the user's `prefers-reduced-motion` OS/browser setting so
+ * components can skip or simplify Framer Motion animations.
+ */
+export function useReducedMotion(): boolean {
+  const [reduced, setReduced] = useState(getInitialReducedMotion);
+
+  useEffect(() => {
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handleChange = (event: MediaQueryListEvent) => setReduced(event.matches);
+    query.addEventListener("change", handleChange);
+    return () => query.removeEventListener("change", handleChange);
+  }, []);
+
+  return reduced;
+}
