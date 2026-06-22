@@ -30,7 +30,7 @@ India.** See [`/disclaimer`](#) once the app is running.
 React 19 · TypeScript · Vite · Tailwind CSS v4 · React Router · Framer Motion
 · lucide-react
 
-## 🚀 Getting Started
+## 🚀 Installtion
 
 ```bash
 npm install
