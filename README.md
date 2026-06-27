@@ -1,4 +1,4 @@
-# Democratic Bharat — Voting Awareness Platform
+# Democratic Bharat — Voting Awareness Platform (Educational Purpose)
 
 An independent, non-partisan civic education platform that explains India's
 democratic process, Electronic Voting Machines (EVMs), VVPAT systems,
@@ -48,4 +48,4 @@ Requires Node.js 18+.
 Concept, design, and development by **Parth Chittalwar** . Built as an independent civic education
 initiative; content is sourced from publicly available Election Commission
 of India materials and simplified for general audiences (see
-`/references` for sources).
+`/references` for sources). 
